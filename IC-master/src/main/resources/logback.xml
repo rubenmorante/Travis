@@ -1,0 +1,25 @@
+<configuration>
+	<!-- Appender: log outputs -->
+	<!-- ConsoleAppender: console output
+		 FileAppender: file output -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    	<!-- message format -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    	<file>logs/back.log</file>
+    	<encoder>
+      		<pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    	</encoder>
+  	</appender>
+    <!-- log configuration -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+    
+    <logger name="jpau.iwcn.master.controllers" additivity="false" level="info">
+    	<appender-ref ref="FILE" />
+  	</logger>
+</configuration>

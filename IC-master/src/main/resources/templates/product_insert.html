@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title th:text="#{product_insert_tab_title}"></title>
+		<meta name="Jesús Pau de la Cruz" content="Jesús Pau de la Cruz" />
+		<meta name="keywords" content="HTML,CSS" />	
+		<meta charset="UTF-8" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>	
+		<header>
+        	<h3 th:text="#{product_insert_inserted}"></h3>	
+        </header>
+       	<footer>
+       		<a th:href="@{/home}" th:text="#{special_back_home}"></a>    			
+       	</footer>
+	</body>
+</html>
